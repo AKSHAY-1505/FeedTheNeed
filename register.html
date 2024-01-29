@@ -1,0 +1,102 @@
+<html>
+  <head><title>Registration</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+  <style>
+    .image-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .image-container img {
+      height: 170px;
+      width: 220px;
+      padding-right: 475px;
+      padding-top: 180px;
+    }
+  </style>
+  <script>
+    function validateEmail() {
+      var emailInput = document.getElementById("eml");
+      var email = emailInput.value;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var isValidEmail = emailRegex.test(email);
+
+      if (!isValidEmail) {
+        alert("Invalid email address. Please enter a valid email.");
+        emailInput.focus();
+        event.preventDefault();
+        return false;
+      }
+      var passwordInput = document.getElementById("pasd");
+      var password = passwordInput.value;
+
+      if (password.length < 8) {
+        alert("Password should be at least 8 characters long.");
+        passwordInput.focus();
+        event.preventDefault(); // Stop form submission
+        return false;
+      }
+
+      var repasswordInput = document.getElementById("repasd");
+      var repassword = repasswordInput.value;
+
+      if(password != repassword){
+        alert("Password does not match");
+        passwordInput.focus();
+        event.preventDefault(); // Stop form submission
+        return false;
+      }
+    }
+  </script>
+  </head>
+  <body>
+    <h1><b>REGISTER</b></h1><br>
+    <form action="process-reg.php" method="POST" onsubmit="return validateEmail();">
+      <div>
+      <label>Name: </label>
+      <input type="text" name="name"><br>
+      </div>
+      
+      <div>
+      <label>E-Mail: </label>
+      <input type="text" name="email" id="eml"><br>
+      </div>
+
+      <div>
+        <label>Phone: </label>
+        <input type="text" name="phone" id="ph"><br>
+      </div>
+
+      <div>
+        <label>Address: </label>
+        <textarea id="addr" name="address" rows="5" cols="33"></textarea><br>
+      </div>
+
+      <div>
+      <label>Password: </label>
+      <input type="password" name="pswd" id="pasd"><br>
+      </div>
+
+      <div>
+      <label>Re Enter Password: </label>
+      <input type="password" name="repswd" id="repasd"><br>
+      </div>
+      
+      <div>
+        <fieldset>
+          <legend>You are a: </legend>
+              <label><input type="radio" name="role" value="1">Restaraunt</label>
+              <label><input type="radio" name="role" value="2">Charity</label>
+        </fieldset>
+      </div>
+
+      <div>
+        <input type="submit" name="submit" onclick="validateEmail();">
+      </div>
+      <div class="image-container">
+        <img src="Images/reg1.png" height="100" width="180">
+      </div>
+    </form>
+  </body>
+</html>

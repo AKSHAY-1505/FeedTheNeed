@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Feed the Need</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #006666;
+			color: black;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			animation: fadeInUp 1s ease forwards;
+		}
+		
+		.container {
+			max-width: 1200px;
+			padding: 50px 20px;
+			opacity: 0;
+			transform: translateY(50px);
+			animation: fadeInUp 1s ease forwards, moveUp 1s ease forwards;
+		}
+		
+		h1 {
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-size: 20px;
+			line-height: 1.5;
+			margin-bottom: 20px;
+		}
+		
+		.button {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: black;
+			color: #fff;
+			border-radius: 50px;
+			text-decoration: none;
+			font-size: 18px;
+			transition: all 0.2s ease-in-out;
+		}
+		
+		.button:hover {
+			background-color: #4CAF50;
+			transform: translateY(-2px);
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+		}
+		
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(50px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		
+		@keyframes moveUp {
+			from {
+				transform: translateY(50px);
+			}
+			to {
+				transform: translateY(0);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>About Feed the Need</h1>
+		<p>Welcome to Feed the Need, a platform that connects restaurants with nearby charities to reduce food waste and help those in need. We believe that everyone deserves access to healthy, nutritious food, and we're working to make that a reality by facilitating the donation of excess food from restaurants to charities.</p>
+		<p>Our platform is designed to make it easy for restaurants to donate their excess food, and for charities to receive and distribute that food to those in need. We provide a simple, streamlined registration process, as well as tools and resources to help restaurants and charities manage their donations.</p>
+		<p>At Feed the Need, we're committed to reducing food waste and supporting our communities. By donating excess food from restaurants, we're helping to feed those who might otherwise go hungry, while also reducing the amount of food that goes to waste.</p>
+		<p>If you're a restaurant looking to donate excess food, or a charity in need of donations, we encourage you to sign up for our platform and join our mission to feed the need.</p>
+		<a href="Welcome.html" class="button">GO BACK</a>
+	</div>
+</body>
+</html>

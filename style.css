@@ -1,0 +1,64 @@
+body {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    background-color: #006666;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+
+  /* Style for the navbar links */
+  .navbar a {
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-right: 1px solid white;
+  }
+
+  .navbar a:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+
+  .mainbtn {
+    display: flex;
+    padding: 10px 20px;
+    margin-left: 675px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Add rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition effect */
+    margin-right: 60px;
+  }
+
+  .mainbtn:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
